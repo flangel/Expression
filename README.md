@@ -1,6 +1,6 @@
 [![Travis](https://img.shields.io/travis/nicklockwood/Expression.svg)](https://travis-ci.org/nicklockwood/Expression)
 [![Coveralls](https://coveralls.io/repos/github/nicklockwood/Expression/badge.svg)](https://coveralls.io/github/nicklockwood/Expression)
-[![Platforms](https://img.shields.io/badge/platforms-iOS%20|%20macOS%20|%20tvOS%20|%20watchOS%20|%20Linux-lightgray.svg)]()
+[![Platforms](https://img.shields.io/badge/platforms-iOS%20|%20macOS%20|%20tvOS%20|%20watchOS%20|%20Android%20|%20Linux-lightgray.svg)]()
 [![Swift 4.2](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift)
 [![Swift 5.1](https://img.shields.io/badge/swift-5.1-red.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
@@ -29,6 +29,7 @@
     - [Symbols](#symbols-1)
     - [Literals](#literals)
     - [Anonymous Functions](#anonymous-functions)
+    - [Android Support](#android-support)
     - [Linux Support](#linux-support)
 - [Example Projects](#example-projects)
     - [Benchmark](#benchmark)
@@ -41,7 +42,7 @@
 
 ## What?
 
-Expression is a Swift framework for evaluating expressions at runtime on Apple and Linux platforms
+Expression is a Swift framework for evaluating expressions at runtime on Apple, Android and Linux platforms
 
 The Expression library is split into two parts:
 
@@ -564,6 +565,10 @@ let expression = AnyExpression("foo()(2)", symbols: [
 ```
 
 **Note:** anonymous functions are assumed to be impure, so they are never eligible for inlining, regardless of whether you use the `pureSymbols` option.
+
+## Android Support
+
+Expression works on Android. See Android compiler documentation [here](https://docs.scade.io/docs/calculatorapp#section-using-a-3rd-party-library)
 
 ## Linux Support
 
